@@ -4,7 +4,7 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-blue?logo=microsoft)](https://microsoft.github.io/VibeVoice)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface)](https://huggingface.co/collections/microsoft/vibevoice-68a2ef24a875c44be47b034f)
 [![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/pdf/2508.19205)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minipasila/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb)
 [![Live Playground](https://img.shields.io/badge/Live-Playground-green?logo=gradio)](https://aka.ms/VibeVoice-Demo)
 
 </div>
@@ -83,7 +83,7 @@ https://github.com/user-attachments/assets/a357c4b6-9768-495c-a576-1618f6275727
 
 For more examples, see the [Project Page](https://microsoft.github.io/VibeVoice).
 
-Try it on [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) or [Demo](https://aka.ms/VibeVoice-Demo).
+Try it on [Colab](https://colab.research.google.com/github/minipasila/VibeVoice/blob/main/demo/VibeVoice_colab.ipynb) or [Demo](https://aka.ms/VibeVoice-Demo).
 
 
 
@@ -92,7 +92,7 @@ Try it on [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/b
 |-------|----------------|----------|----------|
 | VibeVoice-0.5B-Streaming | - | - | On the way |
 | VibeVoice-1.5B | 64K | ~90 min | [HF link](https://huggingface.co/microsoft/VibeVoice-1.5B) |
-| VibeVoice-7B-Preview| 32K | ~45 min | [HF link](https://huggingface.co/WestZhang/VibeVoice-Large-pt) |
+| VibeVoice-7B-Preview| 32K | ~45 min | [HF link](https://huggingface.co/newsletter/VibeVoice-Large-pt) |
 
 ## Installation
 We recommend to use NVIDIA Deep Learning Container to manage the CUDA environment. 
@@ -110,7 +110,7 @@ sudo docker run --privileged --net=host --ipc=host --ulimit memlock=-1:-1 --ulim
 
 2. Install from github
 ```bash
-git clone https://github.com/microsoft/VibeVoice.git
+git clone https://github.com/minipasila/VibeVoice.git
 cd VibeVoice/
 
 pip install -e .
@@ -132,17 +132,17 @@ apt update && apt install ffmpeg -y # for demo
 python demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B --share
 
 # For 7B model
-python demo/gradio_demo.py --model_path WestZhang/VibeVoice-Large-pt --share
+python demo/gradio_demo.py --model_path newsletter/VibeVoice-Large-pt --share
 ```
 
 ### Usage 2: Inference from files directly
 ```bash
 # We provide some LLM generated example scripts under demo/text_examples/ for demo
 # 1 speaker
-python demo/inference_from_file.py --model_path WestZhang/VibeVoice-Large-pt --txt_path demo/text_examples/1p_abs.txt --speaker_names Alice
+python demo/inference_from_file.py --model_path newsletter/VibeVoice-Large-pt --txt_path demo/text_examples/1p_abs.txt --speaker_names Alice
 
 # or more speakers
-python demo/inference_from_file.py --model_path WestZhang/VibeVoice-Large-pt --txt_path demo/text_examples/2p_music.txt --speaker_names Alice Frank
+python demo/inference_from_file.py --model_path newsletter/VibeVoice-Large-pt --txt_path demo/text_examples/2p_music.txt --speaker_names Alice Frank
 ```
 
 ## FAQ
